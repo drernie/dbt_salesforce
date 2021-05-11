@@ -1,3 +1,3 @@
 packages:
-  - package: fivetran/salesforce_source
-    version: [">=0.2.1", "<0.3.0"]
+  - git: https://github.com/drernie/dbt_salesforce_source.git
+    warn-unpinned: false
