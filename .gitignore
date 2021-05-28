@@ -1,6 +1,7 @@
 
 target/
 dbt_modules/
+dbt_env/bin/*
 logs/
 keyfile.json
 .DS_Store
