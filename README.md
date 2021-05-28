@@ -10,8 +10,8 @@ The primary outputs of this package are described below. Staging and intermediat
 
 **model**|**description**
 -----|-----
-salesforce\_\_manager\_performance|Each record represents a manager, enriched with data about their team's pipeline, bookings, loses, and win percentages.
-salesforce\_\_owner\_performance|Each record represents an individual member of the sales team, enriched with data about their pipeline, bookings, loses, and win percentages.
+salesforce\_\_manager\_performance|Each record represents a manager, enriched with data about their team's pipeline, bookings, losses, and win percentages.
+salesforce\_\_owner\_performance|Each record represents an individual member of the sales team, enriched with data about their pipeline, bookings, losses, and win percentages.
 salesforce\_\_sales\_snapshot|A single row snapshot that provides various metrics about your sales funnel.
 salesforce\_\_opportunity\_enhanced|Each record represents an opportunity, enriched with related data about the account and opportunity owner.
 
@@ -29,8 +29,8 @@ By default, this package looks for your Salesforce data in the `salesforce` sche
 config-version: 2
 
 vars:
-    salesforce_schema: your_database_name
-    salesforce_database: your_schema_name
+    salesforce_schema: your_schema_name
+    salesforce_database: your_database_name
 ```
 
 This package allows users to add additional columns to the opportunity enhanced table. Columns passed through must be present in the downstream source account table or user table. If you want to include a column from the user table, you must specify if you want it to be a field relate to the opportunity_manager or opportunity_owner.
@@ -60,8 +60,6 @@ on the best workflow for contributing to a package.
 
 ## Database support
 This package has been tested on BigQuery, Snowflake and Redshift.
-
-Coming soon -- compatibility with Spark
 
 ## Resources:
 - Provide [feedback](https://www.surveymonkey.com/r/DQ7K7WW) on our existing dbt packages or what you'd like to see next
