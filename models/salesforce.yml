@@ -387,20 +387,22 @@ models:
         description: The timestamp when the current user last viewed this record or list view. If this value is null, the user might have only accessed this record or list view (LastReferencedDate) but not viewed it.
       - name: lead_source
         description: Source of this order, such as Advertisement or Trade Show.
-      - name: order_name
-        description: Required. A name for this order.
+      - name: order_number
+        description: Required. A number for this order.
+        tests:
+          - not_null
       - name: record_type_id
         description: ID of the record type assigned to this object.
-      - name: stage_name
-        description: Required. Current stage of this record. The StageName field controls several other fields on an order.
+      - name: status
+        description: Whether the order is won, lost, in the pipeline, or other.
+        tests:
+          - not_null
       - name: type
         description: Type of order. For example, Existing Business or New Business.
       - name: account_name
         description: Name of the account.
         tests:
           - not_null
-      - name: account_source
-        description: The source of the account record. For example, Advertisement, Data.com, or Trade Show.
       - name: closed_amount_this_month
         description: The order amount, if closed this month.
       - name: closed_amount_this_quarter
@@ -421,8 +423,6 @@ models:
         description: The difference in days between the current day and the day the order was created.
       - name: days_to_close
         description: The difference in days between the close day and the day the order was created.
-      - name: forecast_category
-        description: The category of the state of the order. Default values are 'pipeline','forecast','bestcase','closed', and 'omited'
       - name: industry
         description: An industry associated with this account.
       - name: is_closed_this_month
@@ -455,5 +455,3 @@ models:
         description: The state associated with the owner.
       - name: owner_id
         description: '{{ doc("owner_id") }}'
-      - name: status
-        description: Whether the order is won, lost, in the pipeline, or other.
