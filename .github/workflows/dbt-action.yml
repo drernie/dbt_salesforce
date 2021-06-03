@@ -23,10 +23,10 @@ jobs:
           dbt_command: "dbt debug --profiles-dir ."
         env:
           DBT_TOKEN: ${{ secrets.TOKEN }}
-      - name: dbt-action
-        uses: mwhitaker/dbt-action@databricks
-        with:
-          dbt_command: "dbt run --profiles-dir ."
-        env:
-          DBT_TOKEN: ${{ secrets.TOKEN }}
+      # - name: dbt-action
+      #   uses: mwhitaker/dbt-action@databricks
+      #   with:
+      #     dbt_command: "dbt run --profiles-dir ."
+      #   env:
+      #     DBT_TOKEN: ${{ secrets.TOKEN }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
