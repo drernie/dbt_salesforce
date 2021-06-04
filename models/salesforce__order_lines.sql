@@ -28,8 +28,11 @@ with order as (
       product.product_code,
       product.name as product_name,
       product.family as product_family,
-      item.*
-
+      item.quantity,
+      item.unit_price,
+      item.serial_numbers_c,
+      item.subscription_months_c,
+      item.subscription_units_c
 
     --The below script allows for pass through columns.
 

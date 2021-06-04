@@ -487,3 +487,29 @@ models:
         description: Name of the account.
         tests:
           - not_null
+      - name: created_date
+        description: Date when the order was created.
+        tests:
+          - not_null
+      - name: last_modified_date
+        description: Date when the order was last modified.
+        tests:
+          - not_null
+      - name: net_suite_product_id_c
+        description: The ID of the associated product.
+      - name: product_family_c
+        description: The type of product, eg Subscription or Hardware.
+      - name: product_code_text_c
+        description: Nauto part number.
+      - name: quantity
+        description: How many units of this product.
+        tests:
+          - not_null
+      - name: unit_price
+        description: Price per unit.
+      - name: serial_numbers_c
+        description: Nauto serial numbers for devices.
+      - name: subscription_months_c
+        description: For Subscriptions, how many months long.
+      - name: subscription_units_c
+        description: For Subscriptions, how many units.
