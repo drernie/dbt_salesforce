@@ -17,6 +17,7 @@ vars:
     account: "{{ ref('stg_salesforce__account') }}"
     opportunity: "{{ ref('stg_salesforce__opportunity') }}"
     order: "{{ ref('stg_salesforce__order') }}"
+    enhanced: "{{ ref('salesforce__order_enhanced') }}"
     item: "{{ ref('stg_salesforce__item') }}"
     product: "{{ ref('stg_salesforce__product') }}"
     user: "{{ ref('stg_salesforce__user') }}"
