@@ -23,5 +23,5 @@ vars:
     order_enhanced_pass_through_columns: []
 
 clean-targets:
-    - target
-    - dbt_modules
+- target
+- dbt_modules
