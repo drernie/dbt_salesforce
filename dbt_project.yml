@@ -2,7 +2,7 @@ config-version: 2
 name: 'salesforce'
 version: '0.4.0'
 profile: default
-require-dbt-version: [">=0.20.0"]
+require-dbt-version: [">=0.19.1"]
 models:
   salesforce:
     materialized: table
